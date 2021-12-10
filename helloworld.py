@@ -78,6 +78,7 @@ def promptLogin():
     if not userExists(username):
         if input("Username not found. Do you want to create a new user? (y/n) ") == 'y':
             promptSignup()
+            return
         else:
             end()
             return
@@ -136,3 +137,5 @@ def start():
 
 print("Hello there!")
 start()
+
+connection.close()
